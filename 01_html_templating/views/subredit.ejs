@@ -1,0 +1,29 @@
+<%- include('partials/header') %>
+
+
+    <%- include('partials/navBar') %>
+
+        <h1>Browsing the <%= name %> subredit</h1>
+        <h2>
+            <%= description %>
+        </h2>
+        <p>
+            <%= subscribers %>
+        </p>
+        <hr />
+
+        <% for (let post of posts) { %>
+            <article>
+                <h3>
+                    <%= post.title %>
+                </h3>
+                <p><strong>
+                        <%= post.author %>
+                    </strong></p>
+                <% if (post.img) { %>
+                    <img src=<%=post.img %> alt="">
+                    <% } %>
+            </article>
+            <% } %>
+
+                <%- include('partials/footer') %>

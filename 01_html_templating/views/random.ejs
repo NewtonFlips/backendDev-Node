@@ -1,0 +1,14 @@
+<%- include('partials/header') %>
+
+
+    <%- include('partials/navBar') %>
+        <!-- Conditions (if - else) -->
+        <h1>The random number is <%= rand %>
+        </h1>
+        <% if (rand % 2===0) { %>
+            <h2>That is an even number</h2>
+            <% } else { %>
+                <h2>That is an odd number</h2>
+                <% } %>
+                    <h3>That number is an <%= rand % 2===0 ? 'EVEN' : 'ODD' %> number</h3>
+                    <%- include('partials/footer') %>

@@ -1,0 +1,14 @@
+<%- include('partials/header') %>
+
+
+    <%- include('partials/navBar') %>
+        <h1>All Cats</h1>
+        <ul>
+            <!-- For-of loop is used for looping over arrays -->
+            <% for(const cat of cats) { %>
+                <li>
+                    <%= cat %>
+                </li>
+                <% } %>
+        </ul>
+        <%- include('partials/footer') %>
